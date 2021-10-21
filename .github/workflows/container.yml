@@ -7,9 +7,9 @@ on:
     path: 
       - 'packages/container/**'
 
-  default:
-    run: 
-      working-directory: packages/containers
+defaults:
+  run: 
+    working-directory: packages/containers
 
 jobs:
   build: 
