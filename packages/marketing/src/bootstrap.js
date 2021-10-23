@@ -4,8 +4,11 @@ import { createMemoryHistory } from 'history'
 import App from './App'
 
 // Mount Function to Start App
-const mount = (el) => {
+const mount = (el, { onNavigate }) => {
   const history = createMemoryHistory();
+
+  history.listen(onNavigate)
+
   ReactDOM.render(<App history={history}/>, el)
 }
 
